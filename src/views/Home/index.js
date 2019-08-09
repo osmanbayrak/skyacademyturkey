@@ -14,9 +14,9 @@ import accessories from '../../assets/accessories.jpg';
 
 class HomePage extends React.Component {
   render() {
-    let routeTo = (url) => {
-      router.push(url)
-    }
+    let routeTo = url => {
+      router.push(url);
+    };
     const topColResponsiveProps = {
       xs: 24,
       sm: 12,
@@ -44,41 +44,137 @@ class HomePage extends React.Component {
             <img className="carouselImg" src={fifth} style={{ height: 'auto', width: '100%' }} />
           </div>
         </Carousel>
-        <div className="homeProductsTitle"><Icon type="caret-down" /> PRODUCTS <Icon type="caret-down" /></div>
-        <Row gutter={12} className="homeRow">
-          <Col {...topColResponsiveProps} style={{cursor: 'pointer'}} onClick={()=> {routeTo('/products/uzunmamuller/insaatdemiri')}}>
-            <Card
-              bodyStyle={{minHeight: '15px'}}
-              title={<div style={{fontSize: '22px', textAlign: 'center', marginBottom: '10px', fontWeight: '900', paddingBottom: '8px'}}>Gliders</div>}
-              cover={<span style={{ overflow: 'hidden', marginTop: '3px' }}><img className="rowImages" alt="example" src={gliders} /></span>}
+        <div className="homeProductsTitle">
+          <Icon type="caret-down" /> PRODUCTS <Icon type="caret-down" />
+        </div>
+        <div className="pageContent">
+          <Row gutter={12}>
+            <Col
+              {...topColResponsiveProps}
+              style={{ cursor: 'pointer' }}
+              onClick={() => {
+                routeTo('/products/gliders');
+              }}
             >
-            </Card>
-          </Col>
-          <Col {...topColResponsiveProps} style={{cursor: 'pointer'}} onClick={()=> {routeTo('/products/yassimamuller/shr')}}>
-            <Card
-              bodyStyle={{minHeight: '15px'}}
-              title={<div style={{fontSize: '22px', textAlign: 'center', marginBottom: '10px', fontWeight: '900', paddingBottom: '8px'}}>Harnestes</div>}
-              cover={<span style={{ overflow: 'hidden', marginTop: '3px' }}><img className="rowImages" alt="example" src={harnestes} /></span>}
+              <Card
+                bordered
+                bodyStyle={{ minHeight: '15px' }}
+                style={{ borderRadius: '10px' }}
+                title={
+                  <div
+                    style={{
+                      fontSize: '22px',
+                      textAlign: 'center',
+                      marginBottom: '10px',
+                      fontWeight: '900',
+                      paddingBottom: '8px',
+                    }}
+                  >
+                    Gliders
+                  </div>
+                }
+                cover={
+                  <span style={{ overflow: 'hidden', marginTop: '3px' }}>
+                    <img className="rowImages" alt="example" src={gliders} />
+                  </span>
+                }
+              />
+            </Col>
+            <Col
+              {...topColResponsiveProps}
+              style={{ cursor: 'pointer' }}
+              onClick={() => {
+                routeTo('/products/harnestes');
+              }}
             >
-            </Card>
-          </Col>
-          <Col {...topColResponsiveProps} style={{cursor: 'pointer'}} onClick={()=> {routeTo('/products/profiller/kdkp')}}>
-            <Card
-              bodyStyle={{minHeight: '15px'}}
-              title={<div style={{fontSize: '22px', textAlign: 'center', marginBottom: '10px', fontWeight: '900', paddingBottom: '8px'}}>Reserves</div>}
-              cover={<span style={{ overflow: 'hidden', marginTop: '3px' }}><img className="rowImages" alt="example" src={reserves} /></span>}
+              <Card
+                bordered
+                bodyStyle={{ minHeight: '15px' }}
+                style={{ borderRadius: '10px' }}
+                title={
+                  <div
+                    style={{
+                      fontSize: '22px',
+                      textAlign: 'center',
+                      marginBottom: '10px',
+                      fontWeight: '900',
+                      paddingBottom: '8px',
+                    }}
+                  >
+                    Harnestes
+                  </div>
+                }
+                cover={
+                  <span style={{ overflow: 'hidden', marginTop: '3px' }}>
+                    <img className="rowImages" alt="example" src={harnestes} />
+                  </span>
+                }
+              />
+            </Col>
+            <Col
+              {...topColResponsiveProps}
+              style={{ cursor: 'pointer' }}
+              onClick={() => {
+                routeTo('/products/reserves');
+              }}
             >
-            </Card>
-          </Col>
-          <Col {...topColResponsiveProps} style={{cursor: 'pointer'}} onClick={()=> {routeTo('')}}>
-            <Card
-              bodyStyle={{minHeight: '15px'}}
-              title={<div style={{fontSize: '22px', textAlign: 'center', marginBottom: '10px', fontWeight: '900', paddingBottom: '8px'}}>Accessories</div>}
-              cover={<span style={{ overflow: 'hidden', marginTop: '3px' }}><img className="rowImages" alt="example" src={accessories} /></span>}
+              <Card
+                bordered
+                bodyStyle={{ minHeight: '15px' }}
+                style={{ borderRadius: '10px' }}
+                title={
+                  <div
+                    style={{
+                      fontSize: '22px',
+                      textAlign: 'center',
+                      marginBottom: '10px',
+                      fontWeight: '900',
+                      paddingBottom: '8px',
+                    }}
+                  >
+                    Reserves
+                  </div>
+                }
+                cover={
+                  <span style={{ overflow: 'hidden', marginTop: '3px' }}>
+                    <img className="rowImages" alt="example" src={reserves} />
+                  </span>
+                }
+              />
+            </Col>
+            <Col
+              {...topColResponsiveProps}
+              style={{ cursor: 'pointer' }}
+              onClick={() => {
+                routeTo('/products/accessories');
+              }}
             >
-            </Card>
-          </Col>
-        </Row>
+              <Card
+                bordered
+                bodyStyle={{ minHeight: '15px' }}
+                style={{ borderRadius: '10px' }}
+                title={
+                  <div
+                    style={{
+                      fontSize: '22px',
+                      textAlign: 'center',
+                      marginBottom: '10px',
+                      fontWeight: '900',
+                      paddingBottom: '8px',
+                    }}
+                  >
+                    Accessories
+                  </div>
+                }
+                cover={
+                  <span style={{ overflow: 'hidden', marginTop: '3px' }}>
+                    <img className="rowImages" alt="example" src={accessories} />
+                  </span>
+                }
+              />
+            </Col>
+          </Row>
+        </div>
       </div>
     );
   }

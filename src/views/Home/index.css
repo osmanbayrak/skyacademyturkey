@@ -1,3 +1,6 @@
+.carouselImg {
+  box-shadow: 0px 3px 20px 3px rgba(0, 0, 0, 0.8); }
+
 .ant-card {
   font-family: "Titillium Web", sans-serif !important;
   background: white;
@@ -21,9 +24,6 @@
         font-weight: bold; }
   .ant-card .ant-card-body {
     padding: 10px; }
-
-.homeRow {
-  margin-top: 40px; }
 
 .rowImages {
   height: 320px; }

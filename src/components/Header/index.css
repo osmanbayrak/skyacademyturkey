@@ -1,7 +1,15 @@
 .headerMenu {
     line-height: 64px; 
-    font-size: 20px; 
+    font-size: 20px;
+    font-weight: 900;
     height: 85px;
+    border-bottom: solid 2px #2f2f2f;
+    background: transparent;
+}
+.subMenu {
+    line-height: 64px; 
+    font-size: 20px;
+    font-weight: 900;
 }
 .headerLogo {
     height: 65px;
@@ -11,17 +19,6 @@
     height: 85px;
     width: 100%;
     box-shadow: 0px 3px 20px 3px rgba(0,0,0,0.8);
-}
-
-.menuDiv {
-}
-
-.logoDiv {
-    
-}
-
-.carouselImg {
-    box-shadow: 0px 3px 20px 1px rgba(0,0,0,0.8);
 }
 
 @media only screen and (max-device-width : 640px) {

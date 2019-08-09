@@ -18,6 +18,10 @@ body {
 }
 .content { overflow: hidden;}
 
+.pageContent {
+    margin: 50px;
+}
+
 // Using for responsive chart
 .recharts-responsive-container {
     min-width: 300px;

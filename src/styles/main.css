@@ -16,6 +16,9 @@ body {
 .content {
   overflow: hidden; }
 
+.pageContent {
+  margin: 50px; }
+
 .recharts-responsive-container {
   min-width: 300px;
   min-height: 250px; }
