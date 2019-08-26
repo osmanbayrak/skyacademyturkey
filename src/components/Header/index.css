@@ -1,15 +1,15 @@
 .headerMenu {
     line-height: 64px; 
-    font-size: 20px;
-    font-weight: 900;
+    font-size: 18px;
     height: 85px;
     border-bottom: solid 2px #2f2f2f;
     background: transparent;
+    letter-spacing: 2px;
 }
 .subMenu {
     line-height: 64px; 
-    font-size: 20px;
-    font-weight: 900;
+    font-size: 18px;
+    letter-spacing: 2px;
 }
 .headerLogo {
     height: 65px;
@@ -19,6 +19,13 @@
     height: 85px;
     width: 100%;
     box-shadow: 0px 3px 20px 3px rgba(0,0,0,0.8);
+    border-bottom: solid 2px #2f2f2f;
+    background: #232b2b;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 4;
 }
 
 @media only screen and (max-device-width : 640px) {
@@ -34,6 +41,14 @@
     .headerIndex {
         height: 60px;
         width: 100%;
+        box-shadow: 0px 3px 20px 3px rgba(0,0,0,0.8);
+        border-bottom: solid 2px #2f2f2f;
+        background: #232b2b;
+        color: white;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 4;
     }
     
 }

@@ -1,22 +1,20 @@
 import './index.css';
 import React from 'react';
-import router from 'react-router';
+import { Link } from 'react-router-dom';
 import { Carousel, Card, Col, Row, Icon } from 'antd';
-import first from '../../assets/first.JPG';
-import second from '../../assets/second.JPG';
-import third from '../../assets/third.JPG';
-import fourth from '../../assets/fourth.JPG';
-import fifth from '../../assets/fifth.jpg';
-import gliders from '../../assets/gliders.jpg';
-import harnestes from '../../assets/harnestes.jpg';
-import reserves from '../../assets/reserves.jpg';
-import accessories from '../../assets/accessories.jpg';
+import first from '../../assets/first_resize.jpg';
+import second from '../../assets/second_resize.jpg';
+import third from '../../assets/third_resize.jpg';
+import fourth from '../../assets/fourth_resize.jpg';
+import fifth from '../../assets/fifth_resize.jpg';
+import gliders from '../../assets/gliders_resize.png';
+import harnestes from '../../assets/harnestes.png';
+import reserves from '../../assets/reserves_resize.png';
+import accessories from '../../assets/accessories_resize.png';
+import headerBg from '../../assets/bannerBgGray.png';
 
 class HomePage extends React.Component {
   render() {
-    let routeTo = url => {
-      router.push(url);
-    };
     const topColResponsiveProps = {
       xs: 24,
       sm: 12,
@@ -48,131 +46,129 @@ class HomePage extends React.Component {
           <Icon type="caret-down" /> PRODUCTS <Icon type="caret-down" />
         </div>
         <div className="pageContent">
-          <Row gutter={12}>
-            <Col
-              {...topColResponsiveProps}
-              style={{ cursor: 'pointer' }}
-              onClick={() => {
-                routeTo('/products/gliders');
-              }}
-            >
-              <Card
-                bordered
-                bodyStyle={{ minHeight: '15px' }}
-                style={{ borderRadius: '10px' }}
-                title={
-                  <div
-                    style={{
-                      fontSize: '22px',
-                      textAlign: 'center',
-                      marginBottom: '10px',
-                      fontWeight: '900',
-                      paddingBottom: '8px',
-                    }}
-                  >
-                    Gliders
-                  </div>
-                }
-                cover={
-                  <span style={{ overflow: 'hidden', marginTop: '3px' }}>
-                    <img className="rowImages" alt="example" src={gliders} />
-                  </span>
-                }
-              />
-            </Col>
-            <Col
-              {...topColResponsiveProps}
-              style={{ cursor: 'pointer' }}
-              onClick={() => {
-                routeTo('/products/harnestes');
-              }}
-            >
-              <Card
-                bordered
-                bodyStyle={{ minHeight: '15px' }}
-                style={{ borderRadius: '10px' }}
-                title={
-                  <div
-                    style={{
-                      fontSize: '22px',
-                      textAlign: 'center',
-                      marginBottom: '10px',
-                      fontWeight: '900',
-                      paddingBottom: '8px',
-                    }}
-                  >
-                    Harnestes
-                  </div>
-                }
-                cover={
-                  <span style={{ overflow: 'hidden', marginTop: '3px' }}>
-                    <img className="rowImages" alt="example" src={harnestes} />
-                  </span>
-                }
-              />
-            </Col>
-            <Col
-              {...topColResponsiveProps}
-              style={{ cursor: 'pointer' }}
-              onClick={() => {
-                routeTo('/products/reserves');
-              }}
-            >
-              <Card
-                bordered
-                bodyStyle={{ minHeight: '15px' }}
-                style={{ borderRadius: '10px' }}
-                title={
-                  <div
-                    style={{
-                      fontSize: '22px',
-                      textAlign: 'center',
-                      marginBottom: '10px',
-                      fontWeight: '900',
-                      paddingBottom: '8px',
-                    }}
-                  >
-                    Reserves
-                  </div>
-                }
-                cover={
-                  <span style={{ overflow: 'hidden', marginTop: '3px' }}>
-                    <img className="rowImages" alt="example" src={reserves} />
-                  </span>
-                }
-              />
-            </Col>
-            <Col
-              {...topColResponsiveProps}
-              style={{ cursor: 'pointer' }}
-              onClick={() => {
-                routeTo('/products/accessories');
-              }}
-            >
-              <Card
-                bordered
-                bodyStyle={{ minHeight: '15px' }}
-                style={{ borderRadius: '10px' }}
-                title={
-                  <div
-                    style={{
-                      fontSize: '22px',
-                      textAlign: 'center',
-                      marginBottom: '10px',
-                      fontWeight: '900',
-                      paddingBottom: '8px',
-                    }}
-                  >
-                    Accessories
-                  </div>
-                }
-                cover={
-                  <span style={{ overflow: 'hidden', marginTop: '3px' }}>
-                    <img className="rowImages" alt="example" src={accessories} />
-                  </span>
-                }
-              />
-            </Col>
+          <Row gutter={24}>
+            <Link to="/products/gliders">
+              <Col {...topColResponsiveProps} style={{ cursor: 'pointer' }}>
+                <Card
+                  style={{ backgroundImage: `url(${headerBg})` }}
+                  bodyStyle={{ minHeight: '15px' }}
+                  className="productCards"
+                  title={
+                    <div
+                      style={{
+                        fontSize: '22px',
+                        textAlign: 'center',
+                        marginBottom: '10px',
+                        fontWeight: '900',
+                        paddingBottom: '8px',
+                        color: 'aliceblue',
+                      }}
+                    >
+                      GLIDERS
+                    </div>
+                  }
+                  cover={
+                    <span style={{ overflow: 'hidden', marginTop: '3px', textAlign: 'center' }}>
+                      <img className="rowImages" alt="example" src={gliders} />
+                    </span>
+                  }
+                />
+              </Col>
+            </Link>
+            <Link to="/products/harnestes">
+              <Col {...topColResponsiveProps} style={{ cursor: 'pointer' }}>
+                <Card
+                  bodyStyle={{ minHeight: '15px' }}
+                  className="productCards"
+                  style={{ backgroundImage: `url(${headerBg})` }}
+                  title={
+                    <div
+                      style={{
+                        fontSize: '22px',
+                        textAlign: 'center',
+                        marginBottom: '10px',
+                        fontWeight: '900',
+                        paddingBottom: '8px',
+                        color: 'aliceblue',
+                      }}
+                    >
+                      HARNESTES
+                    </div>
+                  }
+                  cover={
+                    <span style={{ overflow: 'hidden', marginTop: '3px', textAlign: 'center' }}>
+                      <img className="rowImages" alt="example" src={harnestes} />
+                    </span>
+                  }
+                />
+              </Col>
+            </Link>
+            <Link to="/products/reserves">
+              <Col {...topColResponsiveProps} style={{ cursor: 'pointer' }}>
+                <Card
+                  bodyStyle={{ minHeight: '15px' }}
+                  className="productCards"
+                  style={{ borderRadius: '10px', backgroundImage: `url(${headerBg})` }}
+                  title={
+                    <div
+                      style={{
+                        fontSize: '22px',
+                        textAlign: 'center',
+                        marginBottom: '10px',
+                        fontWeight: '900',
+                        paddingBottom: '8px',
+                        color: 'aliceblue',
+                      }}
+                    >
+                      RESERVES
+                    </div>
+                  }
+                  cover={
+                    <span style={{ overflow: 'hidden', marginTop: '3px', textAlign: 'center' }}>
+                      <img
+                        style={{ marginLeft: '-120px' }}
+                        className="rowImages"
+                        alt="example"
+                        src={reserves}
+                      />
+                    </span>
+                  }
+                />
+              </Col>
+            </Link>
+            <Link to="/products/accessories">
+              <Col {...topColResponsiveProps} style={{ cursor: 'pointer' }}>
+                <Card
+                  bodyStyle={{ minHeight: '15px' }}
+                  className="productCards"
+                  style={{ borderRadius: '10px', backgroundImage: `url(${headerBg})` }}
+                  title={
+                    <div
+                      style={{
+                        fontSize: '22px',
+                        textAlign: 'center',
+                        marginBottom: '10px',
+                        fontWeight: '900',
+                        paddingBottom: '8px',
+                        color: 'aliceblue',
+                      }}
+                    >
+                      ACCESSORIES
+                    </div>
+                  }
+                  cover={
+                    <span style={{ overflow: 'hidden', marginTop: '3px', textAlign: 'center' }}>
+                      <img
+                        style={{ marginLeft: '-85px' }}
+                        className="rowImages"
+                        alt="example"
+                        src={accessories}
+                      />
+                    </span>
+                  }
+                />
+              </Col>
+            </Link>
           </Row>
         </div>
       </div>

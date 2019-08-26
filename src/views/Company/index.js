@@ -7,15 +7,11 @@ class Company extends React.Component {
   render() {
     return (
       <div>
-        <Row style={{ marginTop: '110px' }}>
-          <h1 style={{ textAlign: 'center', fontSize: '38px', minHeight: '80px' }}>
-            We are Sorry! This Page is Under Construction. A Few Days Later it Will be Finished.
+        <div style={{ marginTop: '60px' }}>
+          <h1 style={{ position: 'absolute', top: '120px', fontSize: '34px', color: 'white' }}>
+            This Page is Under Construction
           </h1>
-        </Row>
-        <div>
-          <Row gutter={12}>
-            <img src={manzara} style={{ width: '100%' }} />
-          </Row>
+          <img src={manzara} style={{ width: '100%' }} />
         </div>
       </div>
     );
