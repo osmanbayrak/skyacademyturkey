@@ -92,7 +92,7 @@ class HomePage extends React.Component {
                         color: 'aliceblue',
                       }}
                     >
-                      HARNESTES
+                      HARNESSES
                     </div>
                   }
                   cover={
