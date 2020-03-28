@@ -19,6 +19,14 @@ import zorro from '../../assets/zorro.jpg';
 import zblade from '../../assets/zblade.jpg';
 import eole from '../../assets/elole.jpg';
 import headerBg from '../../assets/bannerBgGray.png';
+import harness1 from '../../assets/harness1.jpg'
+import harness2 from '../../assets/harness2.jpg'
+import harness3 from '../../assets/harness3.jpg'
+import harness4 from '../../assets/harness4.jpg'
+import harness5 from '../../assets/harness5.jpg'
+import harness6 from '../../assets/harness6.jpg'
+import harness7 from '../../assets/harness7.jpg'
+import harness8 from '../../assets/harness8.jpg'
 
 class Products extends React.Component {
   state = {
@@ -221,8 +229,81 @@ class Products extends React.Component {
           },
         },
       ];
-    } else if (currentCategory == 'harnestes') {
-      products = [];
+    } else if (currentCategory == 'harnesses') {
+      products = [
+        {
+          image: harness1,
+          model: 'SKYLIGHTER 4',
+          productLine: 'Light Line',
+          en: 'Free Flight',
+          attributes: {
+            weight: '3.0-3.4'
+          },
+        },
+        {
+          image: harness2,
+          model: 'GII 4 ALPHA',
+          productLine: 'Comfort Line',
+          en: 'Free Flight',
+          attributes: {
+            weight: '3.0-3.45'
+          },
+        },
+        {
+          image: harness3,
+          model: 'REVERSE 5',
+          productLine: 'Comfort Line',
+          en: 'Free Flight',
+          attributes: {
+            weight: '2.7-3.4'
+          },
+        },
+        {
+          image: harness4,
+          model: 'TRANSFORMER',
+          productLine: 'Comfort Line',
+          en: 'Free Flight',
+          attributes: {
+            weight: '4.37-4.83'
+          },
+        },
+        {
+          image: harness5,
+          model: 'SKYLIGHT TOURIST 2',
+          productLine: 'Light Line',
+          en: 'Free Flight',
+          attributes: {
+            weight: '1.39-1.47'
+          },
+        },
+        {
+          image: harness6,
+          model: 'PAX',
+          productLine: 'Light Line',
+          en: 'Free Flight',
+          attributes: {
+            weight: '2.45-2.8'
+          },
+        },
+        {
+          image: harness7,
+          model: 'CRUX',
+          productLine: 'Light Line',
+          en: 'Free Flight',
+          attributes: {
+            weight: '4.37-4.83'
+          },
+        },
+        {
+          image: harness8,
+          model: 'TWIN',
+          productLine: 'Comfort Line',
+          en: 'Free Flight',
+          attributes: {
+            weight: '2.3-2.5'
+          },
+        },
+      ];
     } else if (currentCategory == 'reserves') {
       products = [];
     } else if (currentCategory == 'accessories') {
@@ -232,14 +313,18 @@ class Products extends React.Component {
     return (
       <div>
         <Row>
-          <img className="productsBannerImg" src={productsBanner} />
+          <img style={{marginTop: '0'}} className="productsBannerImg" src={productsBanner} />
         </Row>
-        <div className="homeProductsTitle">
-          <Icon type="caret-down" /> {currentCategory.toUpperCase()} <Icon type="caret-down" />
-        </div>
+        <Row className="titleRow">
+          <Col span={10} className="titleRowDivider" />
+          <Col span={4} className="titleMiddleDiv">
+            <span>{currentCategory.toUpperCase()}</span>
+          </Col>
+          <Col span={10} className="titleRowDivider" />
+        </Row>
         <div className="pageContent">
           <Row gutter={24}>
-            {products.length > 0 ? (
+            {
               products.map(product => {
                 return (
                   <Col md={{ span: 6 }}>
@@ -250,12 +335,12 @@ class Products extends React.Component {
                         </span>
                       }
                       extra={product.productLine}
-                      bodyStyle={{ minHeight: '397px' }}
-                      cover={<img style={{ height: '200px' }} src={product.image} />}
+                      bodyStyle={{ minHeight: currentCategory == 'gliders' ? '397px' : '200' }}
+                      cover={<img style={{ height: '182px' }} src={product.image} />}
                       style={{ backgroundImage: `url(${headerBg})`, borderRadius: '10px' }}
                       className="productCards"
                     >
-                      <List
+                      {currentCategory == 'gliders' ? <List
                         dataSource={[product]}
                         style={{ color: 'aliceblue' }}
                         renderItem={item => (
@@ -296,16 +381,32 @@ class Products extends React.Component {
                             ) : null}
                           </span>
                         )}
-                      />
+                      /> : (currentCategory == 'harnesses' ? (
+                        <List
+                        dataSource={[product]}
+                        style={{ color: 'aliceblue' }}
+                        renderItem={item => (
+                          <span style={{ fontSize: '19px', letterSpacing: '1px' }}>
+                            <List.Item style={{ textAlign: 'center' }}>
+                              <span style={{ fontSize: '20px', fontWeight: '900' }}>
+                                {product.en}
+                              </span>
+                            </List.Item>
+                            <List.Item>
+                              <span style={{ fontSize: '19px' }}>
+                                Weight: {item.attributes.weight}
+                              </span>
+                            </List.Item>
+                          </span>
+                        )}
+                        />
+                        ) : currentCategory == 'accessories' ? (
+                          <div>Accessories</div>
+                        ) : <div>reserves</div>)}
                     </Card>
                   </Col>
                 );
-              })
-            ) : (
-              <h1 style={{ textAlign: 'center', fontSize: '36px', minHeight: '362px' }}>
-                We are Sorry! This Page is Under Construction. A Few Days Later it Will be Finished.
-              </h1>
-            )}
+              })}
           </Row>
         </div>
       </div>

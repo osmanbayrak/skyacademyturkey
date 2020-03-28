@@ -10,11 +10,15 @@ class Contact extends React.Component {
     return (
       <div>
         <Row>
-          <img className="productsBannerImg" src={contactBanner} />
+          <img style={{marginTop: '0'}} className="productsBannerImg" src={contactBanner} />
         </Row>
-        <div className="homeProductsTitle">
-          <Icon type="caret-down" /> CONTACT US <Icon type="caret-down" />
-        </div>
+        <Row className="titleRow">
+          <Col span={10} className="titleRowDivider" />
+          <Col span={4} className="titleMiddleDiv">
+            <span>CONTACT US</span>
+          </Col>
+          <Col span={10} className="titleRowDivider" />
+        </Row>
         <div className="pageContent">
           <Row gutter={12}>
             <Col md={{ span: 8, offset: 8 }}>

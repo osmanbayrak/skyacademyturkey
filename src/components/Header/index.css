@@ -1,7 +1,7 @@
 .headerMenu {
     line-height: 64px; 
-    font-size: 18px;
-    height: 85px;
+    font-size: 16px;
+    height: 71px;
     border-bottom: solid 2px #2f2f2f;
     background: transparent;
     letter-spacing: 2px;
@@ -12,15 +12,15 @@
     letter-spacing: 2px;
 }
 .headerLogo {
-    height: 65px;
-    margin-top: 12px;
+    height: 50px;
+    margin-top: 9px;
 }
 .headerIndex {
-    height: 85px;
+    height: 71px;
     width: 100%;
     box-shadow: 0px 3px 20px 3px rgba(0,0,0,0.8);
     border-bottom: solid 2px #2f2f2f;
-    background: #232b2b;
+    background: rgba(0,0,0,0.73);
     color: white;
     position: fixed;
     top: 0;

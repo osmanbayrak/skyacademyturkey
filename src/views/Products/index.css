@@ -24,7 +24,6 @@
 
 .productsBannerImg {
   width: 100%;
-  margin-top: 86px;
   border-bottom: solid 1px #001f3f;
   box-shadow: 0px 3px 20px 3px rgba(0, 0, 0, 0.8); }
 
@@ -35,6 +34,47 @@
   transform: scale(1.1);
   transition: transform 0.3s;
   filter: brightness(140%); }
+
+.titleMiddleDiv {
+  width: 16.6%; }
+  @media only screen and (max-width: 1500px) {
+    .titleMiddleDiv {
+      width: 33.3%; } }
+  @media only screen and (max-width: 760px) {
+    .titleMiddleDiv {
+      width: 100%; } }
+
+.titleRow {
+  margin-top: 50px;
+  font-size: 30px;
+  font-weight: 900;
+  text-align: center; }
+  @media only screen and (max-width: 900px) {
+    .titleRow {
+      margin-top: 27px;
+      font-size: 18px;
+      font-weight: 900;
+      text-align: center; } }
+
+.titleRowDivider {
+  margin-top: 25px;
+  height: 1px;
+  background: black;
+  opacity: 0.6;
+  width: 41.666%; }
+  @media only screen and (max-width: 1500px) {
+    .titleRowDivider {
+      margin-top: 25px;
+      height: 1px;
+      background: black;
+      opacity: 0.6;
+      width: 33.3%; } }
+  @media only screen and (max-width: 700px) {
+    .titleRowDivider {
+      margin-top: 25px;
+      height: 1px;
+      background: transparent;
+      width: 33.3%; } }
 
 .homeProductsTitle {
   margin-top: 50px;

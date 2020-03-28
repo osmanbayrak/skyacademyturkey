@@ -8,7 +8,7 @@ import third from '../../assets/third_resize.jpg';
 import fourth from '../../assets/fourth_resize.jpg';
 import fifth from '../../assets/fifth_resize.jpg';
 import gliders from '../../assets/gliders_resize.png';
-import harnestes from '../../assets/harnestes.png';
+import harnesses from '../../assets/harnesses.png';
 import reserves from '../../assets/reserves_resize.png';
 import accessories from '../../assets/accessories_resize.png';
 import headerBg from '../../assets/bannerBgGray.png';
@@ -42,9 +42,13 @@ class HomePage extends React.Component {
             <img className="carouselImg" src={fifth} style={{ height: 'auto', width: '100%' }} />
           </div>
         </Carousel>
-        <div className="homeProductsTitle">
-          <Icon type="caret-down" /> PRODUCTS <Icon type="caret-down" />
-        </div>
+        <Row className="titleRow">
+          <Col span={10} className="titleRowDivider" />
+          <Col span={4} className="titleMiddleDiv">
+            <span>PRODUCTS</span>
+          </Col>
+          <Col span={10} className="titleRowDivider" />
+        </Row>
         <div className="pageContent">
           <Row gutter={24}>
             <Link to="/products/gliders">
@@ -75,7 +79,7 @@ class HomePage extends React.Component {
                 />
               </Col>
             </Link>
-            <Link to="/products/harnestes">
+            <Link to="/products/harnesses">
               <Col {...topColResponsiveProps} style={{ cursor: 'pointer' }}>
                 <Card
                   bodyStyle={{ minHeight: '15px' }}
@@ -97,7 +101,7 @@ class HomePage extends React.Component {
                   }
                   cover={
                     <span style={{ overflow: 'hidden', marginTop: '3px', textAlign: 'center' }}>
-                      <img className="rowImages" alt="example" src={harnestes} />
+                      <img className="rowImages" alt="example" src={harnesses} />
                     </span>
                   }
                 />

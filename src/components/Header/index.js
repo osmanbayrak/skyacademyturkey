@@ -38,7 +38,7 @@ class HeaderComponent extends React.Component {
     const paths = [
       '/home',
       '/products/gliders',
-      '/products/harnestes',
+      '/products/harnesses',
       '/products/reserves',
       '/products/accessories',
       '/company',
@@ -77,10 +77,10 @@ class HeaderComponent extends React.Component {
               <Menu.Item
                 style={{ backgroundImage: `white` }}
                 className="subMenu"
-                key="/products/harnestes"
+                key="/products/harnesses"
               >
-                <Link style={{ fontSize: '18px' }} to="/products/harnestes">
-                  HARNESTES
+                <Link style={{ fontSize: '18px' }} to="/products/harnesses">
+                  HARNESSES
                 </Link>
               </Menu.Item>
               <Menu.Item
