@@ -2,6 +2,12 @@ import './index.css';
 import React from 'react';
 import { Card, Col, Row, Icon, List } from 'antd';
 import productsBanner from '../../assets/productsBanner.png';
+import glidersPoster from '../../assets/glidersPoster.jpg'
+import harnessesPoster from '../../assets/harnessesPoster.jpg'
+import glidersVideo from '../../assets/glidersVideo.mp4'
+import harnessesVideo from '../../assets/harnessesVideo.mp4'
+import reservesVideo from '../../assets/reservesVideo.mp4'
+import reservesPoster from '../../assets/reservesPoster.jpeg'
 import apollo2a from '../../assets/apollo2a.png';
 import kea2 from '../../assets/kea2.jpg';
 import aya from '../../assets/aya2.jpg';
@@ -232,7 +238,7 @@ class Products extends React.Component {
     return (
       <div>
         <Row>
-          <img className="productsBannerImg" src={productsBanner} />
+          {currentCategory == 'gliders' ? <video autoplay loop poster={glidersPoster} style={{width: '100%'}}><source src={glidersVideo} /></video> : (currentCategory == 'harnesses' ? <video autoplay loop poster={harnessesPoster} style={{width: '100%'}}><source src={harnessesVideo} /></video> : (currentCategory == 'reserves' ? <video autoplay loop poster={reservesPoster} style={{width: '100%'}}><source src={reservesVideo} /></video> : <div>accessories</div>))}
         </Row>
         <div className="homeProductsTitle">
           <Icon type="caret-down" /> {currentCategory.toUpperCase()} <Icon type="caret-down" />
