@@ -10,7 +10,7 @@ class Contact extends React.Component {
     return (
       <div>
         <Row>
-          <img style={{marginTop: '0'}} className="productsBannerImg" src={contactBanner} />
+          <img style={{ marginTop: '0' }} className="productsBannerImg" src={contactBanner} />
         </Row>
         <Row className="titleRow">
           <Col span={10} className="titleRowDivider" />

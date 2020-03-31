@@ -1,13 +1,13 @@
 import './index.css';
 import React from 'react';
 import { Card, Col, Row, Icon, List } from 'antd';
-import glidersPoster from '../../assets/glidersPoster.jpg'
-import harnessesPoster from '../../assets/harnessesPoster.jpg'
-import glidersVideo from '../../assets/glidersVideo.mp4'
-import harnessesVideo from '../../assets/harnessesVideo.mp4'
-import reservesVideo from '../../assets/reservesVideo.mp4'
-import reservesPoster from '../../assets/reservesPoster.jpeg'
-import accessoriesNew from '../../assets/accessoriesNew.jpg'
+import glidersPoster from '../../assets/glidersPoster.jpg';
+import harnessesPoster from '../../assets/harnessesPoster.jpg';
+import glidersVideo from '../../assets/glidersVideo.mp4';
+import harnessesVideo from '../../assets/harnessesVideo.mp4';
+import reservesVideo from '../../assets/reservesVideo.mp4';
+import reservesPoster from '../../assets/reservesPoster.jpeg';
+import accessoriesNew from '../../assets/accessoriesNew.jpg';
 import apollo2a from '../../assets/apollo2a.png';
 import kea2 from '../../assets/kea2.jpg';
 import aya from '../../assets/aya2.jpg';
@@ -25,14 +25,19 @@ import zorro from '../../assets/zorro.jpg';
 import zblade from '../../assets/zblade.jpg';
 import eole from '../../assets/elole.jpg';
 import headerBg from '../../assets/bannerBgGray.png';
-import harness1 from '../../assets/harness1.jpg'
-import harness2 from '../../assets/harness2.jpg'
-import harness3 from '../../assets/harness3.jpg'
-import harness4 from '../../assets/harness4.jpg'
-import harness5 from '../../assets/harness5.jpg'
-import harness6 from '../../assets/harness6.jpg'
-import harness7 from '../../assets/harness7.jpg'
-import harness8 from '../../assets/harness8.jpg'
+import harness1 from '../../assets/harness1.jpg';
+import harness2 from '../../assets/harness2.jpg';
+import harness3 from '../../assets/harness3.jpg';
+import harness4 from '../../assets/harness4.jpg';
+import harness5 from '../../assets/harness5.jpg';
+import harness6 from '../../assets/harness6.jpg';
+import harness7 from '../../assets/harness7.jpg';
+import harness8 from '../../assets/harness8.jpg';
+import reserve1 from '../../assets/reserve1.jpg';
+import reserve2 from '../../assets/reserve2.jpg';
+import reserve3 from '../../assets/reserve3.jpg';
+import reserve4 from '../../assets/reserve4.jpg';
+import reserve5 from '../../assets/reserve5.jpg';
 
 class Products extends React.Component {
   state = {
@@ -41,7 +46,7 @@ class Products extends React.Component {
 
   componentDidUpdate(prevProps, prevState) {
     if (prevProps.match.params.category != this.props.match.params.category) {
-      this.setState({ currentCategory: this.props.match.params.category });
+      this.setState({ currentCategory: this.props.match.params.category }, this.forceUpdate());
     }
   }
   render() {
@@ -243,7 +248,7 @@ class Products extends React.Component {
           productLine: 'Light Line',
           en: 'Free Flight',
           attributes: {
-            weight: '3.0-3.4'
+            weight: '3.0-3.4',
           },
         },
         {
@@ -252,7 +257,7 @@ class Products extends React.Component {
           productLine: 'Comfort Line',
           en: 'Free Flight',
           attributes: {
-            weight: '3.0-3.45'
+            weight: '3.0-3.45',
           },
         },
         {
@@ -261,7 +266,7 @@ class Products extends React.Component {
           productLine: 'Comfort Line',
           en: 'Free Flight',
           attributes: {
-            weight: '2.7-3.4'
+            weight: '2.7-3.4',
           },
         },
         {
@@ -270,7 +275,7 @@ class Products extends React.Component {
           productLine: 'Comfort Line',
           en: 'Free Flight',
           attributes: {
-            weight: '4.37-4.83'
+            weight: '4.37-4.83',
           },
         },
         {
@@ -279,7 +284,7 @@ class Products extends React.Component {
           productLine: 'Light Line',
           en: 'Free Flight',
           attributes: {
-            weight: '1.39-1.47'
+            weight: '1.39-1.47',
           },
         },
         {
@@ -288,7 +293,7 @@ class Products extends React.Component {
           productLine: 'Light Line',
           en: 'Free Flight',
           attributes: {
-            weight: '2.45-2.8'
+            weight: '2.45-2.8',
           },
         },
         {
@@ -297,7 +302,7 @@ class Products extends React.Component {
           productLine: 'Light Line',
           en: 'Free Flight',
           attributes: {
-            weight: '4.37-4.83'
+            weight: '4.37-4.83',
           },
         },
         {
@@ -306,40 +311,99 @@ class Products extends React.Component {
           productLine: 'Comfort Line',
           en: 'Free Flight',
           attributes: {
-            weight: '2.3-2.5'
+            weight: '2.3-2.5',
           },
         },
       ];
     } else if (currentCategory == 'reserves') {
-      products = [];
+      products = [
+        {
+          image: reserve1,
+          model: 'QUATRO',
+          productLine: 'Light Line',
+          en: 'Free Flight',
+          attributes: {
+            weight: '1.24-1.4',
+          },
+        },
+        {
+          image: reserve2,
+          model: 'SKY SYSTEM2',
+          productLine: 'Comfort Line',
+          en: 'Free Flight',
+          attributes: {
+            weight: '1.40-2.00',
+          },
+        },
+        {
+          image: reserve3,
+          model: 'SKY SPARE LIGHT',
+          productLine: 'Light Line',
+          en: 'Free Flight',
+          attributes: {
+            weight: '1.40-3.45',
+          },
+        },
+        {
+          image: reserve4,
+          model: 'SKY LIGHT',
+          productLine: 'Light Line',
+          en: 'Free Flight',
+          attributes: {
+            weight: '0.99-2.6',
+          },
+        },
+        {
+          image: reserve5,
+          model: 'SKY DRIVE 2',
+          productLine: 'Sport Line',
+          en: 'Free Flight',
+          attributes: {
+            weight: '1.85(including two-phase container)',
+          },
+        },
+      ];
     } else if (currentCategory == 'accessories') {
       products = [];
+    }
+    let categoryMedia = {
+      posters: {gliders: glidersPoster, harnesses: harnessesPoster, reserves: reservesPoster,},
+      videos: {gliders: glidersVideo, harnesses: harnessesVideo, reserves: reservesVideo}
     }
 
     return (
       <div>
         <Row>
-          {currentCategory == 'gliders' ? <video autoplay loop poster={glidersPoster} style={{width: '100%'}}><source src={glidersVideo} /></video> : (currentCategory == 'harnesses' ? <video autoplay loop poster={harnessesPoster} style={{width: '100%'}}><source src={harnessesVideo} /></video> : (currentCategory == 'reserves' ? <video autoplay loop poster={reservesPoster} style={{width: '100%'}}><source src={reservesVideo} /></video> : <img style={{width: '100%'}} src={accessoriesNew} />))}
+          <video autoPlay={true} loop poster={categoryMedia.posters[currentCategory]} style={{ width: '100%' }}>
+            <source src={categoryMedia.videos[currentCategory]} />
+          </video>
+        </Row>
+        <Row className="titleRow">
+          <Col span={10} className="titleRowDivider" />
+          <Col span={4} className="titleMiddleDiv">
+            <span>{currentCategory.toUpperCase()}</span>
+          </Col>
+          <Col span={10} className="titleRowDivider" />
         </Row>
         <div className="pageContent">
           <Row gutter={24}>
-            {
-              products.map(product => {
-                return (
-                  <Col md={{ span: 6 }}>
-                    <Card
-                      title={
-                        <span style={{ fontSize: '24px', fontWeight: '900', color: 'aliceblue' }}>
-                          {product.model}
-                        </span>
-                      }
-                      extra={product.productLine}
-                      bodyStyle={{ minHeight: currentCategory == 'gliders' ? '397px' : '200' }}
-                      cover={<img style={{ height: '182px' }} src={product.image} />}
-                      style={{ backgroundImage: `url(${headerBg})`, borderRadius: '10px' }}
-                      className="productCards"
-                    >
-                      {currentCategory == 'gliders' ? <List
+            {products.map(product => {
+              return (
+                <Col md={{ span: 6 }}>
+                  <Card
+                    title={
+                      <span style={{ fontSize: '24px', fontWeight: '900', color: 'aliceblue' }}>
+                        {product.model}
+                      </span>
+                    }
+                    extra={product.productLine}
+                    bodyStyle={{ minHeight: currentCategory == 'gliders' ? '397px' : '200' }}
+                    cover={<img style={{ height: '182px' }} src={product.image} />}
+                    style={{ backgroundImage: `url(${headerBg})`, borderRadius: '10px' }}
+                    className="productCards"
+                  >
+                    {currentCategory == 'gliders' ? (
+                      <List
                         dataSource={[product]}
                         style={{ color: 'aliceblue' }}
                         renderItem={item => (
@@ -380,8 +444,9 @@ class Products extends React.Component {
                             ) : null}
                           </span>
                         )}
-                      /> : (currentCategory == 'harnesses' ? (
-                        <List
+                      />
+                    ) : currentCategory == 'harnesses' || currentCategory == 'reserves' ? (
+                      <List
                         dataSource={[product]}
                         style={{ color: 'aliceblue' }}
                         renderItem={item => (
@@ -398,14 +463,16 @@ class Products extends React.Component {
                             </List.Item>
                           </span>
                         )}
-                        />
-                        ) : currentCategory == 'accessories' ? (
-                          <div>Accessories</div>
-                        ) : <div>reserves</div>)}
-                    </Card>
-                  </Col>
-                );
-              })}
+                      />
+                    ) : currentCategory == 'accessories' ? (
+                      <div>Accessories</div>
+                    ) : (
+                      <div>reserves</div>
+                    )}
+                  </Card>
+                </Col>
+              );
+            })}
           </Row>
         </div>
       </div>

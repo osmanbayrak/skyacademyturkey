@@ -7,10 +7,10 @@ class Company extends React.Component {
   render() {
     return (
       <div>
-          <h1 style={{ position: 'absolute', top: '120px', fontSize: '34px', color: 'white' }}>
-            This Page is Under Construction
-          </h1>
-          <img src={manzara} style={{ width: '100%' }} />
+        <h1 style={{ position: 'absolute', top: '120px', fontSize: '34px', color: 'white' }}>
+          This Page is Under Construction
+        </h1>
+        <img src={manzara} style={{ width: '100%' }} />
       </div>
     );
   }
