@@ -366,17 +366,31 @@ class Products extends React.Component {
     } else if (currentCategory == 'accessories') {
       products = [];
     }
-    let categoryMedia = {
-      posters: {gliders: glidersPoster, harnesses: harnessesPoster, reserves: reservesPoster,},
-      videos: {gliders: glidersVideo, harnesses: harnessesVideo, reserves: reservesVideo}
-    }
 
     return (
       <div>
         <Row>
-          <video autoPlay={true} loop poster={categoryMedia.posters[currentCategory]} style={{ width: '100%' }}>
-            <source src={categoryMedia.videos[currentCategory]} />
-          </video>
+          {currentCategory == 'gliders' ? (
+            <div>
+              <video id="1" autoPlay loop poster={glidersPoster} style={{ width: '100%' }}>
+                <source src={glidersVideo} />
+              </video>
+            </div>
+          ) : currentCategory == 'harnesses' ? (
+            <React.Fragment>
+              <video id="2" autoPlay loop poster={harnessesPoster} style={{ width: '100%' }}>
+                <source src={harnessesVideo} />
+              </video>
+            </React.Fragment>
+          ) : currentCategory == 'reserves' ? (
+            <span>
+              <video id="2" autoPlay loop poster={reservesPoster} style={{ width: '100%' }}>
+                <source src={reservesVideo} />
+              </video>
+            </span>
+          ) : (
+            <img style={{ width: '100%' }} src={accessoriesNew} />
+          )}
         </Row>
         <Row className="titleRow">
           <Col span={10} className="titleRowDivider" />
