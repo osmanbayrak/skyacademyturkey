@@ -46,11 +46,12 @@ class Products extends React.Component {
 
   componentDidUpdate(prevProps, prevState) {
     if (prevProps.match.params.category != this.props.match.params.category) {
-      this.setState({ currentCategory: this.props.match.params.category }, this.forceUpdate());
+      this.setState({ currentCategory: this.props.match.params.category });
     }
   }
   render() {
     const { currentCategory } = this.state;
+    console.log(currentCategory == 'gliders' ? '397px' : '200');
     let products = [];
     if (currentCategory == 'gliders') {
       products = [
@@ -412,7 +413,7 @@ class Products extends React.Component {
                     }
                     extra={product.productLine}
                     bodyStyle={{ minHeight: currentCategory == 'gliders' ? '397px' : '200' }}
-                    cover={<img style={{ height: '182px' }} src={product.image} />}
+                    cover={<img style={{ height: '160px' }} src={product.image} />}
                     style={{ backgroundImage: `url(${headerBg})`, borderRadius: '10px' }}
                     className="productCards"
                   >

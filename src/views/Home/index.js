@@ -7,8 +7,8 @@ import second from '../../assets/second_resize.jpg';
 import third from '../../assets/third_resize.jpg';
 import fourth from '../../assets/fourth_resize.jpg';
 import fifth from '../../assets/fifth_resize.jpg';
-import gliders from '../../assets/gliders_resize.png';
-import harnesses from '../../assets/harnesses.png';
+import gliders from '../../assets/gliders_yeni.png';
+import harnesses from '../../assets/harnesses_yeni.jpg';
 import reserves from '../../assets/reserves_resize.png';
 import accessories from '../../assets/accessories_resize.png';
 import headerBg from '../../assets/bannerBgGray.png';
@@ -73,7 +73,12 @@ class HomePage extends React.Component {
                   }
                   cover={
                     <span style={{ overflow: 'hidden', marginTop: '3px', textAlign: 'center' }}>
-                      <img className="rowImages" alt="example" src={gliders} />
+                      <img
+                        className="rowImages"
+                        style={{ marginLeft: '-15px' }}
+                        alt="example"
+                        src={gliders}
+                      />
                     </span>
                   }
                 />
@@ -101,7 +106,12 @@ class HomePage extends React.Component {
                   }
                   cover={
                     <span style={{ overflow: 'hidden', marginTop: '3px', textAlign: 'center' }}>
-                      <img className="rowImages" alt="example" src={harnesses} />
+                      <img
+                        className="rowImages"
+                        style={{ marginLeft: '-95px' }}
+                        alt="example"
+                        src={harnesses}
+                      />
                     </span>
                   }
                 />

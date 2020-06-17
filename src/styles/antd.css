@@ -16887,7 +16887,7 @@ textarea.ant-mention-wrapper .ant-mention-editor {
 }
 .ant-menu-item > a {
   display: block;
-  color: rgba(0, 0, 0, 0.65);
+  color: white;
 }
 .ant-menu-item > a:hover {
   color: #1890ff;
@@ -17012,7 +17012,6 @@ textarea.ant-mention-wrapper .ant-mention-editor {
 .ant-menu-submenu-popup {
   position: absolute;
   z-index: 1050;
-  background: #fff;
   border-radius: 4px;
 }
 .ant-menu-submenu-popup .submenu-title-wrapper {
@@ -17028,7 +17027,7 @@ textarea.ant-mention-wrapper .ant-mention-editor {
   content: ' ';
 }
 .ant-menu-submenu > .ant-menu {
-  background-color: #fff;
+  background-color: rgba(0,0,0,0.73);
   border-radius: 4px;
 }
 .ant-menu-submenu > .ant-menu-submenu-title::after {
@@ -17166,7 +17165,7 @@ textarea.ant-mention-wrapper .ant-mention-editor {
 }
 .ant-menu-horizontal > .ant-menu-item > a {
   display: block;
-  color: rgba(0, 0, 0, 0.65);
+  color: #fff;
 }
 .ant-menu-horizontal > .ant-menu-item > a:hover {
   color: #1890ff;
@@ -17414,7 +17413,7 @@ textarea.ant-mention-wrapper .ant-mention-editor {
 .ant-menu-dark .ant-menu-item,
 .ant-menu-dark .ant-menu-item-group-title,
 .ant-menu-dark .ant-menu-item > a {
-  color: rgba(255, 255, 255, 0.65);
+  color: white;
 }
 .ant-menu-dark.ant-menu-inline,
 .ant-menu-dark.ant-menu-vertical,
